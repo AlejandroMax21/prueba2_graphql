@@ -3,5 +3,24 @@
     "@sendgrid/mail": "^8.1.6",
     "apollo-server": "^3.13.0",
     "dotenv": "^17.2.3"
-  }
+  },
+  "name": "prueba2_graphql",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000p\u0000r\u0000u\u0000e\u0000b\u0000a\u00002\u0000_\u0000g\u0000r\u0000a\u0000p\u0000h\u0000q\u0000l\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlejandroMax21/prueba2_graphql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AlejandroMax21/prueba2_graphql/issues"
+  },
+  "homepage": "https://github.com/AlejandroMax21/prueba2_graphql#readme"
 }
