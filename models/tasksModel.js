@@ -1,7 +1,10 @@
+const sgMail = require('@sendgrid/mail')
+
 const tasks =[
     {id: 1, name: "tarea 1", completed: false },
     {id: 2, name: "tarea 2", completed: false }
 ];
+
 
 function getAll(){
     return tasks;
@@ -28,6 +31,28 @@ function completedTask(id){
     ...tasks[index],
     completed:true
     }
+
+    //sendgrid ------------------------------
+    const msg = {
+        to: 'abruizlo@ittepic.edu.mx', // correo del destinatario
+        from: 'abruizlo@ittepic.edu.mx', // correo verificado de envio
+        subject: 'Tarea Finalizada',
+        text: 'Enhorabuena! La tarea ' + tasks[index].name + ' ha sido marcada como completada.',
+        html: `
+            <p>¡Enhorabuena! La tarea <strong>"${tasks[index].name}"</strong> ha sido marcada como completada.</p>
+        `,
+    }
+
+    sgMail
+    .send(msg)
+    .then((response) => {
+        console.log(response[0].statusCode)
+        console.log(response[0].headers)
+    })
+    .catch((error) => {
+        console.error(error)
+    })
+    //Email sendgrid --------------------------
     return tasks[index];
 }
 

@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.6",
+    "apollo-server": "^3.13.0",
+    "dotenv": "^17.2.3"
+  }
+}
