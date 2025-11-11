@@ -8,7 +8,7 @@ function getAll(){
 }
 
 function getById(id){
-     return tasks.find((t) => t.id === id) || null;
+     return tasks.find((t) => String(t.id) === id) || null;
 }
 
 function createTask(name){
@@ -22,7 +22,7 @@ function createTask(name){
 }
 
 function completedTask(id){
-    const index = tasks.findIndex((t) => t.id === id);
+    const index = tasks.findIndex((t) => String(t.id) === id);
     if (index === -1) return null;
     tasks[index] = {
     ...tasks[index],
